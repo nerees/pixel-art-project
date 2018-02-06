@@ -2,7 +2,7 @@
 //Why do we need this: https://learn.jquery.com/using-jquery-core/document-ready/
 $( document ).ready(function() {
 //waiting till the height and width of the grid will be submitted
-document.getElementById('sizePicker').addEventListener('submit', function(evt){
+$('#sizePicker').on('submit', function(evt){
       evt.preventDefault(); // without this grid dissapears
       let h = document.getElementById('inputHeight').value;
       let w = document.getElementById('inputWeight').value;
@@ -38,6 +38,6 @@ function makeGrid(h, w) {
     note.find('p').remove();
     note.append('<p></p>');
     const notetext = note.find('p');
-    notetext.append('To clear the color please click again on grid');  
+    notetext.append('To clear the color please click again on grid');
 
 }
